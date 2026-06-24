@@ -1,10 +1,11 @@
 import type { CardStyleOptions } from '../types'
+import type { SymbolCount } from '../dobble'
 
 type Props = CardStyleOptions & {
-  symbolOptions: number[]
+  symbolOptions: SymbolCount[]
   onChange: {
     setCardSize: (value: number) => void
-    setSymbolsPerCard: (value: number) => void
+    setSymbolsPerCard: (value: SymbolCount) => void
     setBackgroundColor: (value: string) => void
     setShowBorder: (value: boolean) => void
     setCenterTitle: (value: string) => void
@@ -24,7 +25,7 @@ export function CardOptions({ cardSize, symbolsPerCard, symbolOptions, backgroun
       </div>
       <div className="field">
         <label>תמונות בכל קלף</label>
-        <select value={symbolsPerCard} onChange={(event) => onChange.setSymbolsPerCard(Number(event.target.value))}>
+        <select value={symbolsPerCard} onChange={(event) => onChange.setSymbolsPerCard(Number(event.target.value) as SymbolCount)}>
           {symbolOptions.map((count) => (
             <option key={count} value={count}>
               {count} תמונות בקלף

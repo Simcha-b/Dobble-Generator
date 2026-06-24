@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { createDobbleDeck, VALID_SYMBOL_COUNTS } from './dobble'
+import { createDobbleDeck, VALID_SYMBOL_COUNTS, type SymbolCount } from './dobble'
 import { calculateCardLayouts } from './card-layout'
 import { downloadPdf } from './pdf'
 import { ImageUpload } from './ui/ImageUpload'
@@ -16,7 +16,7 @@ function App() {
   const [selectedConfirmed, setSelectedConfirmed] = useState<string | null>(null)
   const [editingConfirmedId, setEditingConfirmedId] = useState<string | null>(null)
   const [cardSize, setCardSize] = useState(80)
-  const [symbolsPerCard, setSymbolsPerCard] = useState(8)
+  const [symbolsPerCard, setSymbolsPerCard] = useState<SymbolCount>(8)
   const [backgroundColor, setBackgroundColor] = useState('#ffffff')
   const [showBorder, setShowBorder] = useState(true)
   const [centerTitle, setCenterTitle] = useState('')
