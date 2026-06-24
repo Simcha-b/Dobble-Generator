@@ -36,3 +36,6 @@ coverage/
 
 # system files
 .sass-cache
+
+# build output
+dist/
