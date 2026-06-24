@@ -1,0 +1,29 @@
+{
+  "name": "dobble-maker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@react-pdf/renderer": "^3.0.0",
+    "file-saver": "^2.0.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "svg-to-pdfkit": "^0.1.8"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.5",
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/ui": "^1.0.0",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.1",
+    "vitest": "^1.6.1"
+  }
+}
